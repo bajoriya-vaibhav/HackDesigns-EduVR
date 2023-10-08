@@ -5,11 +5,13 @@ import {staggerContainer, textVariant } from '../utils/motion';
 import { motion } from 'framer-motion';
 import History from '../Components/History';
 import Exceptional from '../Components/Exceptional';
+import { useNavigate } from 'react-router';
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className='relative bg-gradient-to-r from-waterdark to-waterlight'>
-      <div  className='h-screen w-screen'>
-      <img src='./herobg1.png' className='absolute z-0 h-screen w-screen opacity-90 object-fit'/>
+      <div  className='h-full w-screen'>
+      <img src='./herobg1.png' className='absolute z-0 w-screen opacity-90 object-fit -my-10'/>
         <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
           <motion.div
             variants={staggerContainer}
@@ -32,7 +34,7 @@ const Home = () => {
                 <h2 className='text-2xl font-light text-white leading-loose'>Get into the World of Education in our Virtual World </h2>
               </motion.div>
               <motion.h2 variants={textVariant(1.3)} className='text-2xl font-light text-white leading-loose mt-48'>
-                <Button variant="contained" onClick={()=>{}}>Explore More</Button>
+                <Button variant="contained" onClick={()=>{navigate('/intro')}}>Explore More</Button>
               </motion.h2>
             </div>
           </motion.div>

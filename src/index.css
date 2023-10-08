@@ -1,3 +1,193 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+  font-family: Utopia, Helvetica, sans-serif, Luisiana;
+  line-height: 1.5;
+  font-weight: 400;
+  --yellow: #b021df;
+  --gold: #000000;
+  --pale: #da2e98;
+  background-color: #eeeeee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+h1 > .magic {
+  animation: background-pan 4s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--yellow),
+    var(--pale),
+    var(--yellow),
+    var(--gold)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+} 
+
+@keyframes background-pan {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -200%;
+  }
+}
+
+
+/* Intro css ------------------------------- */
+
+.intro-sub{
+  padding: 0.2rem 1rem;
+  font-family: Spectral;
+  border: black solid 0.2rem;
+  font-size: 0.8rem;
+  border-radius: 40px;
+  font-weight: bolder;
+  position: absolute;
+  top: 2rem;
+  left: 8rem;
+
+}
+
+.intro-title{
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 14em;
+  text-align: left;
+  font-family: Spectral;
+  line-height: 90%;
+}
+
+.vid-intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  font-size: 3*0.33rem;
+  top: 27em;
+  left: 17em;
+}
+
+.intro-vid-player{
+  background-color: #010101;
+  scale: 1;
+  padding: 0.3em 0.4em;
+  margin-left: 1em;
+}
+
+.intro-img{
+  position: absolute;
+  top: -15%;
+  z-index: -1;
+  left: 40%;
+  transform: translate(0%,15%);
+  scale: 0.8;
+  background-size: contain;
+}
+
+
+/* -----------Navbar */
+.vertical-navbar {
+  background-color: #333;
+  width: 5em;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.vertical-navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* width: 100%; */
+}
+
+.vertical-navbar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  scale: 2;
+  color: grey;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.vertical-navbar li:hover{
+  color: #EEEEEE;
+  scale: 2.2;
+}
+
+/* ---------About--------------- */
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50*0.2vw;
+}
+
+.abt-img{
+  background-size: contain;
+  position: absolute;
+  top: -55%;
+  left: -40%;
+  transform: translate(0%,10%);
+  scale: 0.4;
+}
+
+.abt-p{
+  margin-left: 55%;
+  transform: translate(-10%,70%);
+  font-size: 1em;
+}
+
+
+#a {
+  background: #d764ab;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 33%;
+  left: 43%;
+  z-index: -2;
+  border-radius: 50%;
+}
+
+#a1 {
+  background: #9810ba;
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  z-index: -2;
+
+}
+
+#a2 {
+  background: #d764ab;
+  width: 12rem;
+  height: 8rem;
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  z-index: -2;
+
+}
