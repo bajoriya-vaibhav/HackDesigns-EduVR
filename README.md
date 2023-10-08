@@ -1,3 +1,10 @@
+## EDU-VR
+Project for HackDesigns hackathon
+
+## Installation
+1) npm i
+2) npm run dev
+
 ## Inspiration
 Making education more immersive and removing root learning from the equation. Also, make online 2D lectures more class-like with an immersive VR experience
 ## What it does
