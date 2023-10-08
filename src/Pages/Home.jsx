@@ -3,11 +3,12 @@ import Button from '@mui/material/Button'
 import styles from '../styles/Styles'
 import {staggerContainer, textVariant } from '../utils/motion';
 import { motion } from 'framer-motion';
-
+import History from '../Components/History';
+import Exceptional from '../Components/Exceptional';
 const Home = () => {
   return (
     <div className='relative bg-gradient-to-r from-waterdark to-waterlight'>
-      <div >
+      <div  className='h-screen w-screen'>
       <img src='./herobg1.png' className='absolute z-0 h-screen w-screen opacity-90 object-fit'/>
         <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
           <motion.div
@@ -37,6 +38,8 @@ const Home = () => {
           </motion.div>
         </section>
       </div>
+      <History/>
+      <Exceptional/>
     </div>
   )
 }

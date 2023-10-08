@@ -2,9 +2,18 @@ import React from 'react'
 
 const History = () => {
   return (
-    <div className='h-screen bg-cream w-screen'>
-      <div className='w-2/5 h-full m-6 rounded-full bg-ginger'>
-        <img src="./person2.png" className=''/>
+    <div className='h-screen bg-cream w-screen flex'>
+      <div className='w-2/5 m-6 rounded-full bg-ginger flex '>
+        <img src="./person1.png" className='h-4/5 w-4/5  m-auto object-cover'/>
+      </div>
+      <div className='w-1/2 m-auto p-4'>
+        <div className='text-4xl font-semibold font-mono'>
+          Our History and<br></br> Core Values
+        </div>
+        <div>
+        EduVR was founded with a vision to revolutionize education through immersive VR technology. Established in 2020, we have since been at the forefront of the VR-based edtech industry, constantly innovating to provide engaging and effective learning experiences.
+        </div>
+        <button className='m-10 border-2 py-2 px-10  rounded-full' variant='outlined'>Learn More</button>
       </div>
     </div>
   )
